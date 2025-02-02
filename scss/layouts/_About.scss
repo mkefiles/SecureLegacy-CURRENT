@@ -1,0 +1,88 @@
+@use '../abstracts/variables';
+@use '../layouts/breakpoints';
+
+sl-about{
+    padding: variables.$xs-padding;
+    background-color: variables.$sl-white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    text-align: center;
+
+    h2{
+        text-align: center;
+        color: black;
+    }
+    figure{
+        border: thin variables.$sl-gray solid;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        max-width: 300px;
+        margin: auto;
+
+        img{
+            max-width: 300px;
+        }
+        figcaption{
+            background-color: variables.$sl-gray;
+            color: variables.$sl-white;
+            font-size: small;
+            padding: 3px;
+            text-align: center;
+        }
+    }
+}
+
+@include breakpoints.sm-breakpoint{
+    sl-about{
+        padding: variables.$sm-padding;
+    }
+}
+
+@include breakpoints.md-breakpoint{
+    sl-about{
+        padding: variables.$md-padding;
+    }
+}
+
+@include breakpoints.lg-breakpoint{
+    sl-about{
+        padding: variables.$lg-padding;
+    }
+}
+
+@include breakpoints.xl-breakpoint{
+    sl-about{
+        padding: variables.$xl-padding;
+        figure{
+            // border: thin variables.$sl-gray solid;
+            // border-radius: 7px;
+            // display: flex;
+            // flex-direction: column;
+            // padding: 5px;
+            max-width: 435px;
+            // margin: auto;
+    
+            img{
+                max-width: 435px;
+            }
+            figcaption{
+                background-color: variables.$sl-gray;
+                color: variables.$sl-white;
+                font-size: small;
+                padding: 3px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@include breakpoints.xxl-breakpoint{
+    sl-about{
+        padding: variables.$xxl-padding;
+    }
+}

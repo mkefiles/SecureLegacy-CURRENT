@@ -1,0 +1,58 @@
+@use '../abstracts/variables';
+@use '../layouts/breakpoints';
+
+sl-footer{
+    padding: variables.$xs-padding;
+    background-color: variables.$sl-green;
+    height: 225px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
+    text-align: center;
+    align-items: center;
+
+    h2{
+        text-align: center;
+        color: variables.$sl-white;
+    }
+    img{
+        height: 30px;
+        width: auto;
+    }
+    p{
+        margin: 0;
+        color: variables.$sl-white;
+    }
+}
+
+@include breakpoints.sm-breakpoint{
+    sl-footer{
+        padding: variables.$sm-padding;
+    }
+}
+
+@include breakpoints.md-breakpoint{
+    sl-footer{
+        padding: variables.$md-padding;
+    }
+}
+
+@include breakpoints.lg-breakpoint{
+    sl-footer{
+        padding: variables.$lg-padding;
+    }
+}
+
+@include breakpoints.xl-breakpoint{
+    sl-footer{
+        padding: variables.$xl-padding;
+    }
+}
+
+@include breakpoints.xxl-breakpoint{
+    sl-footer{
+        padding: variables.$xxl-padding;
+    }
+}

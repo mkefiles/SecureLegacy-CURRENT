@@ -1,0 +1,19 @@
+@use '../abstracts/variables';
+
+.btn{
+    text-align: center;
+    text-decoration: none;
+    color: variables.$sl-white;
+    padding: 7px 10px 7px 10px;
+    border: none;
+    font-weight: 700;
+    border-radius: 25px;
+}
+
+.btn--blue{
+    background-color: variables.$sl-blue;
+}
+
+.btn--green{
+    background-color: variables.$sl-green;
+}

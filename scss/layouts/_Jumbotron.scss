@@ -1,0 +1,89 @@
+@use '../abstracts/variables';
+@use '../layouts/breakpoints';
+
+sl-jumbotron{
+    padding: variables.$xs-padding;
+    height: 450px;
+    // width: 100vw;
+    display: block;
+    background: linear-gradient(to top, rgba(0,0,0,.35), rgba(0,0,0,.35)), url(/assets/img--sl_banner-MOBILE.jpg);
+    background-color: variables.$sl-green;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        h1{
+            text-align: center;
+            color: variables.$sl-white;
+        }
+        p{
+            text-align: center;
+            color: variables.$sl-white;
+        }
+    }
+}
+
+@include breakpoints.sm-breakpoint{
+    sl-jumbotron{
+        padding: variables.$sm-padding;
+        height: 550px;
+    }
+}
+
+@include breakpoints.md-breakpoint{
+    sl-jumbotron{
+        padding: variables.$md-padding;
+        height: 585px;
+        background: linear-gradient(to top, rgba(0,0,0,.35), rgba(0,0,0,.35)), url(/assets/img--sl_banner-TABLET.jpg);
+        background-repeat: no-repeat;
+
+        background-position: right bottom;
+        background-size: cover;
+    }
+}
+
+@include breakpoints.lg-breakpoint{
+    sl-jumbotron{
+        padding: variables.$lg-padding;
+        height: 325px;
+        display: grid;
+        grid-template-columns: 400px auto;
+        grid-template-areas:
+        "text .";
+
+        background: linear-gradient(to top, rgba(0,0,0,.35), rgba(0,0,0,.35)), url(/assets/img--sl_banner-DESKTOP.jpg);
+        background-repeat: no-repeat;
+
+        background-position: right bottom;
+        background-size: cover;
+        &__content{
+            grid-area: text;
+
+            h1{
+                text-align: center;
+                color: variables.$sl-white;
+            }
+            p{
+                text-align: center;
+                color: variables.$sl-white;
+            }
+        }
+    }
+}
+
+@include breakpoints.xl-breakpoint{
+    sl-jumbotron{
+        padding: variables.$xl-padding;
+        height: 400px;
+        grid-template-columns: 500px auto;
+    }
+}
+
+@include breakpoints.xxl-breakpoint{
+    sl-jumbotron{
+        padding: variables.$xxl-padding;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "securelegacy",
+  "version": "1.0.0",
+  "description": "a revamped version of securelegacy containing worksite insurance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mike Files",
+  "license": "UNLICENSED"
+}

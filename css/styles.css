@@ -1,0 +1,754 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+small {
+  font-size: clamp(0.8681rem, 0.8808rem - 0.0132vw, 0.8781rem);
+}
+
+p {
+  font-size: clamp(0.9375rem, 0.91rem + 0.1373vw, 1.0419rem);
+  line-height: 1.3;
+}
+
+h6 {
+  font-size: clamp(1rem, 0.9342rem + 0.3289vw, 1.25rem);
+}
+
+h5 {
+  font-size: clamp(1.0669rem, 0.9529rem + 0.5699vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1.1388rem, 0.9647rem + 0.8701vw, 1.8rem);
+}
+
+h3 {
+  font-size: clamp(1.215rem, 0.9663rem + 1.2434vw, 2.16rem);
+}
+
+h2 {
+  font-size: clamp(1.2963rem, 0.9553rem + 1.7048vw, 2.5919rem);
+}
+
+h1 {
+  font-size: clamp(1.3831rem, 0.9285rem + 2.273vw, 3.1106rem);
+}
+
+.sl-link {
+  font-weight: 400;
+}
+.sl-link a {
+  text-decoration: none;
+}
+
+.sl-link:hover {
+  color: #00d3ff;
+}
+
+.show-me-block {
+  display: block;
+}
+
+.bullet-text {
+  display: inline-block;
+  color: #00d3ff;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.inline-link {
+  color: #009e70;
+  font-weight: 400;
+}
+
+.btn {
+  text-align: center;
+  text-decoration: none;
+  color: #fefefe;
+  padding: 7px 10px 7px 10px;
+  border: none;
+  font-weight: 700;
+  border-radius: 25px;
+}
+
+.btn--blue {
+  background-color: #00d3ff;
+}
+
+.btn--green {
+  background-color: #009e70;
+}
+
+.icon-md {
+  width: 50px;
+  height: auto;
+}
+
+.icon-xs {
+  width: 20px;
+  height: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+sl-nav-mobile {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #fefefe;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+sl-nav-mobile .logo img {
+  height: 40px;
+  width: auto;
+}
+sl-nav-mobile .links img {
+  height: 40px;
+  width: auto;
+}
+
+sl-nav-dropdown {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  width: 100vw;
+  border: none;
+  background-color: #fefefe;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+sl-nav-dropdown ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-nav-mobile {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-nav-mobile {
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-nav-mobile {
+    display: none;
+  }
+  sl-nav-dropdown {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-nav-mobile {
+    display: none;
+  }
+  sl-nav-dropdown {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-nav-mobile {
+    display: none;
+  }
+  sl-nav-dropdown {
+    display: none;
+  }
+}
+sl-nav-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-nav-desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-nav-desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-nav-desktop {
+    padding-left: 115px;
+    padding-right: 115px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  sl-nav-desktop .logo img {
+    height: 40px;
+    width: auto;
+  }
+  sl-nav-desktop .links ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    column-gap: 10px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-nav-desktop {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-nav-desktop {
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+}
+sl-jumbotron {
+  padding: 10px 20px 20px 30px;
+  height: 450px;
+  display: block;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/assets/img--sl_banner-MOBILE.jpg);
+  background-color: #009e70;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+}
+sl-jumbotron__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+sl-jumbotron__content h1 {
+  text-align: center;
+  color: #fefefe;
+}
+sl-jumbotron__content p {
+  text-align: center;
+  color: #fefefe;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-jumbotron {
+    padding: 15px 70px 30px 70px;
+    height: 550px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-jumbotron {
+    padding: 20px 125px 35px 125px;
+    height: 585px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/assets/img--sl_banner-TABLET.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-jumbotron {
+    padding: 25px 125px 35px 125px;
+    height: 325px;
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-areas: "text .";
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/assets/img--sl_banner-DESKTOP.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+  }
+  sl-jumbotron__content {
+    grid-area: text;
+  }
+  sl-jumbotron__content h1 {
+    text-align: center;
+    color: #fefefe;
+  }
+  sl-jumbotron__content p {
+    text-align: center;
+    color: #fefefe;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-jumbotron {
+    padding: 25px 150px 35px 150px;
+    height: 400px;
+    grid-template-columns: 500px auto;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-jumbotron {
+    padding: 25px 200px 35px 200px;
+  }
+}
+sl-why {
+  padding: 10px 20px 20px 30px;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+sl-why h2 {
+  text-align: center;
+  color: black;
+}
+sl-why p {
+  text-align: center;
+  color: black;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-why {
+    padding: 15px 70px 30px 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-why {
+    padding: 20px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-why {
+    padding: 25px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-why {
+    padding: 25px 150px 35px 150px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-why {
+    padding: 25px 200px 35px 200px;
+  }
+}
+sl-products {
+  padding: 10px 20px 20px 30px;
+  background-color: #6b7279;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  text-align: center;
+}
+sl-products h2 {
+  text-align: center;
+  color: #fefefe;
+}
+sl-products__card {
+  background-color: #f7f7f7;
+  padding: 0 7px 15px 7px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  row-gap: 7px;
+}
+sl-products__card .image {
+  display: none;
+}
+sl-products__card .content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+sl-products__card .content h3 {
+  color: #00d3ff;
+}
+sl-products__card .content p {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-products {
+    padding: 15px 70px 30px 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-products {
+    padding: 20px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-products {
+    padding: 25px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-products {
+    padding: 25px 150px 35px 150px;
+    text-align: left;
+  }
+  sl-products__card {
+    padding: 10px 25px 10px 25px;
+    display: grid;
+    grid-template-columns: 200px 15px auto;
+    grid-template-areas: "photo . content";
+    justify-content: start;
+  }
+  sl-products__card .image {
+    display: grid;
+    grid-area: photo;
+    align-items: start;
+  }
+  sl-products__card .image img {
+    height: auto;
+    width: 200px;
+    border-radius: 7px;
+  }
+  sl-products__card .content {
+    display: grid;
+    grid-area: content;
+    justify-items: start;
+  }
+  sl-products__card .content h3 {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-products {
+    padding: 25px 200px 35px 200px;
+  }
+}
+sl-product {
+  padding: 10px 20px 20px 30px;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+sl-product h2 {
+  text-align: center;
+  color: black;
+}
+sl-product h3 {
+  text-align: center;
+  color: #009e70;
+}
+sl-product h4 {
+  text-align: center;
+  color: #6b7279;
+}
+sl-product p {
+  text-align: center;
+  color: black;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-product {
+    padding: 15px 70px 30px 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-product {
+    padding: 20px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-product {
+    padding: 25px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-product {
+    padding: 25px 150px 35px 150px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-product {
+    padding: 25px 200px 35px 200px;
+  }
+}
+sl-about {
+  padding: 10px 20px 20px 30px;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  text-align: center;
+}
+sl-about h2 {
+  text-align: center;
+  color: black;
+}
+sl-about figure {
+  border: thin #7d858d solid;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  max-width: 300px;
+  margin: auto;
+}
+sl-about figure img {
+  max-width: 300px;
+}
+sl-about figure figcaption {
+  background-color: #7d858d;
+  color: #fefefe;
+  font-size: small;
+  padding: 3px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-about {
+    padding: 15px 70px 30px 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-about {
+    padding: 20px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-about {
+    padding: 25px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-about {
+    padding: 25px 150px 35px 150px;
+  }
+  sl-about figure {
+    max-width: 435px;
+  }
+  sl-about figure img {
+    max-width: 435px;
+  }
+  sl-about figure figcaption {
+    background-color: #7d858d;
+    color: #fefefe;
+    font-size: small;
+    padding: 3px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-about {
+    padding: 25px 200px 35px 200px;
+  }
+}
+sl-contact {
+  padding: 10px 20px 20px 30px;
+  background-color: #6b7279;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+sl-contact h2 {
+  text-align: center;
+  color: #fefefe;
+}
+sl-contact p {
+  color: #fefefe;
+}
+sl-contact__card {
+  background: linear-gradient(to top, rgba(254, 254, 254, 0.35), rgba(254, 254, 254, 0.35));
+  padding: 15px 15px 15px 15px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-contact {
+    padding: 15px 70px 30px 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-contact {
+    padding: 20px 125px 35px 125px;
+  }
+  sl-contact__card {
+    column-gap: 17px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-contact {
+    padding: 25px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-contact {
+    padding: 25px 150px 35px 150px;
+  }
+  sl-contact__card {
+    column-gap: 25px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-contact {
+    padding: 25px 200px 35px 200px;
+  }
+}
+sl-footer {
+  padding: 10px 20px 20px 30px;
+  background-color: #009e70;
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+sl-footer h2 {
+  text-align: center;
+  color: #fefefe;
+}
+sl-footer img {
+  height: 30px;
+  width: auto;
+}
+sl-footer p {
+  margin: 0;
+  color: #fefefe;
+}
+
+@media only screen and (min-width: 640px) {
+  sl-footer {
+    padding: 15px 70px 30px 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  sl-footer {
+    padding: 20px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  sl-footer {
+    padding: 25px 125px 35px 125px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  sl-footer {
+    padding: 25px 150px 35px 150px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  sl-footer {
+    padding: 25px 200px 35px 200px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

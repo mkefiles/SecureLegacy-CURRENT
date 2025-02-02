@@ -1,0 +1,68 @@
+@use '../abstracts/variables';
+@use '../layouts/breakpoints';
+
+sl-contact{
+    padding: variables.$xs-padding;
+    background-color: variables.$sl-dark_gray;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    text-align: center;
+    align-items: center;
+
+    h2{
+        text-align: center;
+        color: variables.$sl-white;
+    }
+    p{
+        color: variables.$sl-white;
+    }
+    &__card{
+        background: linear-gradient(to top, rgba(254,254,254,.35), rgba(254,254,254,.35));
+        padding: 15px 15px 15px 15px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+    }
+}
+
+@include breakpoints.sm-breakpoint{
+    sl-contact{
+        padding: variables.$sm-padding;
+    }
+}
+
+@include breakpoints.md-breakpoint{
+    sl-contact{
+        padding: variables.$md-padding;
+        &__card{
+            column-gap: 17px;
+        }
+    }
+}
+
+@include breakpoints.lg-breakpoint{
+    sl-contact{
+        padding: variables.$lg-padding;
+    }
+}
+
+@include breakpoints.xl-breakpoint{
+    sl-contact{
+        padding: variables.$xl-padding;
+        &__card{
+            column-gap: 25px;
+        }
+    }
+}
+
+@include breakpoints.xxl-breakpoint{
+    sl-contact{
+        padding: variables.$xxl-padding;
+    }
+}

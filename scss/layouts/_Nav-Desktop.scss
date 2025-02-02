@@ -1,0 +1,63 @@
+@use '../abstracts/variables';
+@use '../layouts/breakpoints';
+
+sl-nav-desktop{
+    display: none;
+}
+
+@include breakpoints.sm-breakpoint{
+    sl-nav-desktop{
+        display: none;
+    }
+}
+
+@include breakpoints.md-breakpoint{
+    sl-nav-desktop{
+        display: none;
+    }
+}
+
+@include breakpoints.lg-breakpoint{
+    sl-nav-desktop{
+        // background-color: lightblue;
+        padding-left: 115px;
+        padding-right: 115px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            img{
+                height: 40px;
+                width: auto;
+            }        
+        }
+        .links{
+            ul{
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                column-gap: 10px;
+            }
+        }
+    }
+}
+
+@include breakpoints.xl-breakpoint{
+    sl-nav-desktop{
+        // background-color: lightgoldenrodyellow;
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+}
+
+@include breakpoints.xxl-breakpoint{
+    sl-nav-desktop{
+        // background-color: lightseagreen;
+        padding-left: 190px;
+        padding-right: 190px;
+    }
+}

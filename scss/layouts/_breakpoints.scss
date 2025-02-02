@@ -1,0 +1,38 @@
+// Breakpoint variables
+$sm-breakpoint: 640px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 1024px;
+$xl-breakpoint: 1280px;
+$xxl-breakpoint: 1536px;
+
+// Default breakpoint is anything less-than 640px
+
+@mixin sm-breakpoint {
+    @media only screen and (min-width: $sm-breakpoint) {
+        @content;
+    }
+}
+
+@mixin md-breakpoint {
+    @media only screen and (min-width: $md-breakpoint) {
+        @content;
+    }
+}
+
+@mixin lg-breakpoint {
+    @media only screen and (min-width: $lg-breakpoint) {
+        @content;
+    }
+}
+
+@mixin xl-breakpoint {
+    @media only screen and (min-width: $xl-breakpoint) {
+        @content;
+    }
+}
+
+@mixin xxl-breakpoint {
+    @media only screen and (min-width: $xxl-breakpoint) {
+        @content;
+    }
+}

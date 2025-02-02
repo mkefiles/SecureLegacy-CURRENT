@@ -1,0 +1,25 @@
+// Color scheme
+$sl-blue: #00d3ff;
+$sl-green: #009e70;
+$sl-gray: #7d858d;
+$sl-white: #fefefe;
+$sl-dark_white: #f7f7f7;
+$sl-dark_gray: #6b7279;
+
+// Font sizing
+$font-size--2: clamp(0.8681rem, 0.8808rem + -0.0132vw, 0.8781rem);
+$font-size--1: clamp(0.9375rem, 0.91rem + 0.1373vw, 1.0419rem);
+$font-size-0: clamp(1rem, 0.9342rem + 0.3289vw, 1.25rem);
+$font-size-1: clamp(1.0669rem, 0.9529rem + 0.5699vw, 1.5rem);
+$font-size-2: clamp(1.1388rem, 0.9647rem + 0.8701vw, 1.8rem);
+$font-size-3: clamp(1.215rem, 0.9663rem + 1.2434vw, 2.16rem);
+$font-size-4: clamp(1.2963rem, 0.9553rem + 1.7048vw, 2.5919rem);
+$font-size-5: clamp(1.3831rem, 0.9285rem + 2.273vw, 3.1106rem);
+
+// Element settings by breakpoint
+$xs-padding: 10px 20px 20px 30px;
+$sm-padding: 15px 70px 30px 70px;
+$md-padding: 20px 125px 35px 125px;
+$lg-padding: 25px 125px 35px 125px;
+$xl-padding: 25px 150px 35px 150px;
+$xxl-padding: 25px 200px 35px 200px;

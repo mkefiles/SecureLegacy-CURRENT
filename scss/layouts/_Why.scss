@@ -1,0 +1,50 @@
+@use '../abstracts/variables';
+@use '../layouts/breakpoints';
+
+sl-why{
+    padding: variables.$xs-padding;
+    background-color: variables.$sl-white;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    h2{
+        text-align: center;
+        color: black;
+    }
+    p{
+        text-align: center;
+        color: black;
+    }
+}
+
+@include breakpoints.sm-breakpoint{
+    sl-why{
+        padding: variables.$sm-padding;
+    }
+}
+
+@include breakpoints.md-breakpoint{
+    sl-why{
+        padding: variables.$md-padding;
+    }
+}
+
+@include breakpoints.lg-breakpoint{
+    sl-why{
+        padding: variables.$lg-padding;
+    }
+}
+
+@include breakpoints.xl-breakpoint{
+    sl-why{
+        padding: variables.$xl-padding;
+    }
+}
+
+@include breakpoints.xxl-breakpoint{
+    sl-why{
+        padding: variables.$xxl-padding;
+    }
+}

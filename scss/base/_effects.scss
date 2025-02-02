@@ -1,0 +1,28 @@
+@use '../abstracts/variables';
+
+.sl-link{
+    font-weight: 400;
+    a{
+        text-decoration: none;
+    }
+}
+
+.sl-link:hover{
+    color: variables.$sl-blue;
+}
+
+.show-me-block{
+    display: block;
+}
+
+.bullet-text{
+    display: inline-block;
+    color: variables.$sl-blue;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.inline-link{
+    color: variables.$sl-green;
+    font-weight: 400;
+}

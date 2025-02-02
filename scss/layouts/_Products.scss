@@ -1,0 +1,100 @@
+@use '../abstracts/variables';
+@use '../layouts/breakpoints';
+
+sl-products{
+    padding: variables.$xs-padding;
+    background-color: variables.$sl-dark_gray;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    text-align: center;
+
+    h2{
+        text-align: center;
+        color: variables.$sl-white;
+    }
+    &__card{
+        background-color: variables.$sl-dark_white;
+        padding: 0 7px 15px 7px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        row-gap: 7px;
+        .image{
+            display: none;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            h3{
+                color: variables.$sl-blue;
+            }
+            p{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@include breakpoints.sm-breakpoint{
+    sl-products{
+        padding: variables.$sm-padding;
+    }
+}
+
+@include breakpoints.md-breakpoint{
+    sl-products{
+        padding: variables.$md-padding;
+    }
+}
+
+@include breakpoints.lg-breakpoint{
+    sl-products{
+        padding: variables.$lg-padding;
+    }
+}
+
+@include breakpoints.xl-breakpoint{
+    sl-products{
+        padding: variables.$xl-padding;
+        text-align: left;
+        &__card{
+            padding: 10px 25px 10px 25px;
+            display: grid;
+            grid-template-columns: 200px 15px auto;
+            grid-template-areas:
+            "photo . content";
+            justify-content: start;
+            .image{
+                display: grid;
+                grid-area: photo;
+                align-items: start;
+                img{
+                    height: auto;
+                    width: 200px;
+                    border-radius: 7px;
+                }
+            }
+            .content{
+                display: grid;
+                grid-area: content;
+                justify-items: start;
+                h3{
+                    padding-top: 0;
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
+}
+
+@include breakpoints.xxl-breakpoint{
+    sl-products{
+        padding: variables.$xxl-padding;
+    }
+}
